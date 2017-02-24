@@ -57,6 +57,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -69,7 +70,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ImageSenderStepDefinitions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ReportPortalAppender.cs" />
     <Compile Include="SpecFlowFeature1.feature.cs">
       <AutoGen>True</AutoGen>
@@ -85,6 +92,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SpecFlowFeature3.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SpecFlowFeature4.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpecFlowFeature4.feature</DependentUpon>
     </Compile>
     <Compile Include="StepDefinitions.cs" />
   </ItemGroup>
@@ -106,12 +118,28 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SpecFlowFeature3.feature.cs</LastGenOutput>
     </None>
+    <None Include="SpecFlowFeature4.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SpecFlowFeature4.feature.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ReportPortal.Addins.SpecFlowPlugin\ReportPortal.Addins.SpecFlowPlugin.csproj">
       <Project>{d57ce2f8-4bec-4894-887f-4855530a3d4e}</Project>
       <Name>ReportPortal.Addins.SpecFlowPlugin</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lucky.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unlucky.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
